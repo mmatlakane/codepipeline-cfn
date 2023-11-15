@@ -273,7 +273,6 @@ Resources:
             - 'lambda.amazonaws.com'
           Action:
           - 'sts:AssumeRole'
-          - s3:GetObject
       Path: '/'
       ManagedPolicyArns:
       - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
