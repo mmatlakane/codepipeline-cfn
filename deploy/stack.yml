@@ -170,17 +170,17 @@ Resources:
             Configuration:
               ApplicationName: !Ref Application
               DeploymentGroupName: !Ref DeploymentGroup
-        - Name: Test
-          Actions:
-          - Name: Test
-            ActionTypeId:
-              Category: Invoke 
-              Owner: AWS 
-              Version: 1 
-              Provider: Lambda
-            Configuration:
-              FunctionName: !Ref TestLambda
-              UserParameters: !Sub 'http://${EC2Instance.PublicDnsName}'
+        # - Name: Test
+        #   Actions:
+        #   - Name: Test
+        #     ActionTypeId:
+        #       Category: Invoke 
+        #       Owner: AWS 
+        #       Version: 1 
+        #       Provider: Lambda
+        #     Configuration:
+        #       FunctionName: !Ref TestLambda
+        #       UserParameters: !Sub 'http://${EC2Instance.PublicDnsName}'
   CodeDeployIAMRole:
     Type: 'AWS::IAM::Role'
     Properties:
