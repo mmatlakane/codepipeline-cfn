@@ -86,6 +86,7 @@ Resources:
             - codecommit:GetCommit
             - codecommit:GetUploadArchiveStatus
             - codecommit:UploadArchive
+            - s3:GetObject
             Resource: "*"
             Effect: Allow
           - Action:
@@ -94,6 +95,7 @@ Resources:
             - codedeploy:GetDeployment
             - codedeploy:GetDeploymentConfig
             - codedeploy:RegisterApplicationRevision
+            - s3:GetObject
             Resource: "*"
             Effect: Allow
           - Action:
@@ -109,11 +111,13 @@ Resources:
             - sqs:*
             - ecs:*
             - iam:PassRole
+            - s3:GetObject
             Resource: "*"
             Effect: Allow
           - Action:
             - lambda:InvokeFunction
             - lambda:ListFunctions
+            - s3:GetObject
             Resource: "*"
             Effect: Allow
           - Action:
@@ -125,6 +129,7 @@ Resources:
             - opsworks:DescribeStacks
             - opsworks:UpdateApp
             - opsworks:UpdateStack
+            - s3:GetObject
             Resource: "*"
             Effect: Allow
   CodePipeline:
