@@ -284,6 +284,7 @@ Resources:
           - Action:
             - codepipeline:PutJobFailureResult
             - codepipeline:PutJobSuccessResult
+            - s3:GetObject
             Resource: "*"
             Effect: Allow
   TestLambda:
