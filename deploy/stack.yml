@@ -286,9 +286,13 @@ Resources:
             - codepipeline:PutJobSuccessResult
             Resource: "*"
             Effect: Allow
+      - PolicyName: s3-lambda
+        PolicyDocument: 
+          Version: '2012-10-17'
+          Statement: 
           - Action: 
             - s3:GetObject
-            Resource: 'arn:aws:s3:::codepipeline-codedeploy-example-lambda00/*'
+            Resource: "arn:aws:s3:::codepipeline-codedeploy-example-lambda00/*"
             Effect: Allow
   TestLambda:
     Type: "AWS::Lambda::Function"
